@@ -129,9 +129,9 @@ const commentaries = [
   {label: 'Tafsir ibn Kathir', value: 'kathir'},
   {label: 'Tafsir al-Qurtubi', value: 'qurtubi'},
   {label: 'Tafsir al-Tabari', value: 'tabari'},
-    {label: 'Tafsir al-Baghawi', value: 'baghawi'},
-    {label: 'Tafsir al-Suyuti', value: 'suyuti'},
-    {label: 'Tafsir al-Jami', value: 'jami'},
+  {label: 'Tafsir al-Baghawi', value: 'baghawi'},
+  {label: 'Tafsir al-Suyuti', value: 'suyuti'},
+  {label: 'Tafsir al-Jami', value: 'jami'},
   {label: 'Tafsir al-Samarqandi', value: 'samarqandi'},
   {label: 'Tafsir al-Thalabi', value: 'thalabi'},
   {label: 'Tafsir al-Wahidi', value: 'wahidi'},
@@ -277,22 +277,32 @@ export function QuranVerse() {
 
   const handleTranslation = async () => {
     const verseText = `Surah ${surah}, Verse ${verse}`; // Construct verse text
-    const result = await contextualTranslation({
-      verseText: verseText,
-      commentary: selectedCommentary,
-    });
+    try {
+        const result = await contextualTranslation({
+          verseText: verseText,
+          commentary: selectedCommentary,
+        });
 
-    setTranslatedText(result?.translation || 'Translation not available.');
+        setTranslatedText(result?.translation || 'Translation not available.');
+    } catch (error) {
+        console.error("Translation error:", error);
+        setTranslatedText("Error fetching translation. Please try again.");
+    }
   };
 
   const handleExplanation = async () => {
      const verseText = `Surah ${surah}, Verse ${verse}`; // Construct verse text
-     const result = await contextualTranslation({
-       verseText: verseText,
-       commentary: selectedCommentary,
-     });
+     try {
+        const result = await contextualTranslation({
+          verseText: verseText,
+          commentary: selectedCommentary,
+        });
 
-     setExplanation(result?.explanation || 'Explanation not available.');
+        setExplanation(result?.explanation || 'Explanation not available.');
+     } catch (error) {
+         console.error("Explanation error:", error);
+         setExplanation("Error fetching explanation. Please try again.");
+     }
    };
 
 
@@ -379,7 +389,7 @@ export function QuranVerse() {
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
           <img
-              src={`https://source.unsplash.com/600x300/?quran,islamic,verse&${surah}-${verse}`}
+              src={`https://source.unsplash.com/600x300/?islamic+nature&${surah}-${verse}`}
               alt="Quranic Verse"
               className="rounded-md shadow-md mb-4 object-cover w-full h-48" // Added object-cover and fixed height
             />
@@ -393,7 +403,7 @@ export function QuranVerse() {
               Translate
             </Button>
               <img
-              src={`https://source.unsplash.com/600x300/?islamic,tafseer,commentary&${selectedCommentary}`} // Dynamic image URL
+              src={`https://source.unsplash.com/600x300/?islamic+patterns&${selectedCommentary}`} // Dynamic image URL
               alt="Commentary Explanation"
               className="rounded-md shadow-md mb-4 object-cover w-full h-48" // Added object-cover and fixed height
             />
