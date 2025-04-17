@@ -128,6 +128,11 @@ const commentaries = [
   {label: 'Tafsir al-Jalalayn', value: 'jalalayn'},
   {label: 'Tafsir ibn Kathir', value: 'kathir'},
   {label: 'Tafsir al-Qurtubi', value: 'qurtubi'},
+  {label: 'Tafsir al-Tabari', value: 'tabari'},
+  {label: 'Tafsir al-Baghawi', value: 'baghawi'},
+  {label: 'Tafsir al-Samarqandi', value: 'samarqandi'},
+  {label: 'Tafsir al-Thalabi', value: 'thalabi'},
+  {label: 'Tafsir al-Wahidi', value: 'wahidi'},
   // Add more commentaries as needed
 ];
 
@@ -372,7 +377,7 @@ export function QuranVerse() {
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
           <img
-              src={`https://source.unsplash.com/400x200/?islam,quran&${surah}-${verse}`}
+              src={`https://source.unsplash.com/400x200/?quran,islamic,verse&${surah}-${verse}`}
               alt="Quranic Verse"
               className="rounded-md shadow-md mb-4"
             />
@@ -386,7 +391,7 @@ export function QuranVerse() {
               Translate
             </Button>
               <img
-              src={`https://source.unsplash.com/400x200/?islamic,commentary&${selectedCommentary}`} // Dynamic image URL
+              src={`https://source.unsplash.com/400x200/?islamic,tafseer,commentary&${selectedCommentary}`} // Dynamic image URL
               alt="Commentary Explanation"
               className="rounded-md shadow-md mb-4"
             />
