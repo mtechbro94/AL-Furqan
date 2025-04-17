@@ -4,12 +4,19 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  /* Fallback font */
+  background-image: url('https://picsum.photos/1920/1080?random=1');
+  /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Ensure the background covers the entire body */
 }
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --background: 220 13% 91%;
+    --foreground: 240 5.9% 10%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
@@ -44,11 +51,13 @@ body {
     --quran-commentary: 0 0% 3.9%;
     --quran-hadith: 0 0% 3.9%;
     --quran-font: Arial;
-    --arabic-font: Amiri, serif; /* Example Arabic font */
+    --arabic-font: Amiri, serif;
+    /* Example Arabic font */
   }
+
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 240 5.9% 10%;
+    --foreground: 240 4.8% 95.9%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
@@ -87,7 +96,8 @@ body {
     --quran-commentary: 0 0% 98%;
     --quran-hadith: 0 0% 98%;
     --quran-font: Arial;
-     --arabic-font: Amiri, serif; /* Example Arabic font */
+    --arabic-font: Amiri, serif;
+    /* Example Arabic font */
   }
 }
 
@@ -95,9 +105,8 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
-
-

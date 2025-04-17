@@ -373,7 +373,7 @@ export function QuranVerse() {
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
            <img
-              src="https://picsum.photos/400/200" // Placeholder image URL
+              src="https://picsum.photos/400/200?random=2" // Placeholder image URL
               alt="Quranic Verse"
               className="rounded-md shadow-md mb-4"
             />
@@ -387,7 +387,7 @@ export function QuranVerse() {
               Translate
             </Button>
              <img
-              src="https://picsum.photos/400/200" // Placeholder image URL
+              src="https://picsum.photos/400/200?random=3" // Placeholder image URL
               alt="Commentary Explanation"
               className="rounded-md shadow-md mb-4"
             />
@@ -406,4 +406,3 @@ export function QuranVerse() {
     </div>
   );
 }
-
