@@ -277,8 +277,18 @@ export function QuranVerse() {
     });
 
     setTranslatedText(result?.translation || 'Translation not available.');
-    setExplanation(result?.explanation || 'Explanation not available.');
   };
+
+  const handleExplanation = async () => {
+     const verseText = `Surah ${surah}, Verse ${verse}`; // Construct verse text
+     const result = await contextualTranslation({
+       verseText: verseText,
+       commentary: selectedCommentary,
+     });
+
+     setExplanation(result?.explanation || 'Explanation not available.');
+   };
+
 
   return (
     <div className="flex flex-col md:flex-row gap-4 w-full py-12">
@@ -362,11 +372,24 @@ export function QuranVerse() {
             <CardDescription>Translated text and verse explanation</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
+           <img
+              src="https://picsum.photos/400/200" // Placeholder image URL
+              alt="Quranic Verse"
+              className="rounded-md shadow-md mb-4"
+            />
             <Textarea
               readOnly
               placeholder="Translated Text"
               value={translatedText}
               className="bg-fafafa text-quran-translation"
+            />
+            <Button onClick={handleTranslation} className="bg-e3f2fd text-primary-foreground hover:bg-primary">
+              Translate
+            </Button>
+             <img
+              src="https://picsum.photos/400/200" // Placeholder image URL
+              alt="Commentary Explanation"
+              className="rounded-md shadow-md mb-4"
             />
             <Textarea
               readOnly
@@ -374,8 +397,8 @@ export function QuranVerse() {
               value={explanation}
               className="bg-fafafa text-quran-commentary"
             />
-            <Button onClick={handleTranslation} className="bg-e3f2fd text-primary-foreground hover:bg-primary">
-              Translate and Explain
+            <Button onClick={handleExplanation} className="bg-e3f2fd text-primary-foreground hover:bg-primary">
+              Explain Verse
             </Button>
           </CardContent>
         </Card>
@@ -383,3 +406,4 @@ export function QuranVerse() {
     </div>
   );
 }
+

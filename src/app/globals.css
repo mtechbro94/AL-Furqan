@@ -44,6 +44,7 @@ body {
     --quran-commentary: 0 0% 3.9%;
     --quran-hadith: 0 0% 3.9%;
     --quran-font: Arial;
+    --arabic-font: Amiri, serif; /* Example Arabic font */
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -86,6 +87,7 @@ body {
     --quran-commentary: 0 0% 98%;
     --quran-hadith: 0 0% 98%;
     --quran-font: Arial;
+     --arabic-font: Amiri, serif; /* Example Arabic font */
   }
 }
 
@@ -97,4 +99,5 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
 

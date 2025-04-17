@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Contextual Quran Translator',
-  description: 'Translates Quranic verses within the context of commentaries and authentic Hadiths.',
+  title: 'AL Furqan',
+  description: 'Explore the Quran with contextual translations and explanations.',
 };
 
 export default function RootLayout({
@@ -30,4 +30,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 
