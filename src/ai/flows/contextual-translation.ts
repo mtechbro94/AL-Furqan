@@ -1,8 +1,8 @@
 'use server';
 /**
- * @fileOverview Translates Quranic verses with context from commentaries and Hadiths.
+ * @fileOverview Translates Quranic verses with context from commentaries and provides verse comprehension.
  *
- * - contextualTranslation - A function that translates a Quranic verse with context.
+ * - contextualTranslation - A function that translates a Quranic verse with context and provides comprehension.
  * - ContextualTranslationInput - The input type for the contextualTranslation function.
  * - ContextualTranslationOutput - The return type for the contextualTranslation function.
  */
@@ -11,14 +11,14 @@ import {ai} from '@/ai/ai-instance';
 import {z} from 'genkit';
 
 const ContextualTranslationInputSchema = z.object({
-  verse: z.string().describe('The Quranic verse to translate.'),
+  verseText: z.string().describe('The complete Quranic verse to translate.'),
   commentary: z.string().describe('The selected commentary to provide context.'),
-  hadith: z.string().describe('Relevant Hadiths for deeper understanding.'),
 });
 export type ContextualTranslationInput = z.infer<typeof ContextualTranslationInputSchema>;
 
 const ContextualTranslationOutputSchema = z.object({
   translation: z.string().describe('The translated verse with contextual understanding.'),
+  explanation: z.string().describe('Explanation of the verse\'s exact comprehension based on the commentary.'),
 });
 export type ContextualTranslationOutput = z.infer<typeof ContextualTranslationOutputSchema>;
 
@@ -30,23 +30,23 @@ const prompt = ai.definePrompt({
   name: 'contextualTranslationPrompt',
   input: {
     schema: z.object({
-      verse: z.string().describe('The Quranic verse to translate.'),
+      verseText: z.string().describe('The complete Quranic verse to translate.'),
       commentary: z.string().describe('The selected commentary to provide context.'),
-      hadith: z.string().describe('Relevant Hadiths for deeper understanding.'),
     }),
   },
   output: {
     schema: z.object({
       translation: z.string().describe('The translated verse with contextual understanding.'),
+      explanation: z.string().describe('Explanation of the verse\'s exact comprehension based on the commentary.'),
     }),
   },
-  prompt: `You are an expert in Quranic studies and Islamic jurisprudence. Translate the provided Quranic verse considering the context from the given commentary and relevant Hadiths.
+  prompt: `You are an expert in Quranic studies and Islamic jurisprudence. Translate the provided Quranic verse considering the context from the given commentary. Also, provide a detailed explanation of the verse's exact comprehension based on the commentary.
 
-Verse: {{{verse}}}
+Verse: {{{verseText}}}
 Commentary: {{{commentary}}}
-Hadith: {{{hadith}}}
 
-Translation:`,
+Translation:
+Explanation:`,
 });
 
 const contextualTranslationFlow = ai.defineFlow<

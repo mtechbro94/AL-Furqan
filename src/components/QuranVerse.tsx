@@ -124,6 +124,13 @@ const surahs = [
   {label: 'An-Nas (The Mankind)', value: '114'},
 ];
 
+const commentaries = [
+  {label: 'Tafsir al-Jalalayn', value: 'jalalayn'},
+  {label: 'Tafsir ibn Kathir', value: 'kathir'},
+  {label: 'Tafsir al-Qurtubi', value: 'qurtubi'},
+  // Add more commentaries as needed
+];
+
 const versesInSurah = (surah: string): { label: string; value: string }[] => {
   const numVerses = getVerseCount(surah);
   return Array.from({length: numVerses}, (_, i) => ({
@@ -256,20 +263,21 @@ const getVerseCount = (surah: string): number => {
 export function QuranVerse() {
   const [surah, setSurah] = useState<string>('1');
   const [verse, setVerse] = useState<string>('1');
-  const [commentary, setCommentary] = useState('');
-  const [hadith, setHadith] = useState('');
+  const [selectedCommentary, setCommentary] = useState<string>('jalalayn');
   const [translatedText, setTranslatedText] = useState('');
+  const [explanation, setExplanation] = useState('');
 
   const verseOptions = versesInSurah(surah);
 
   const handleTranslation = async () => {
     const verseText = `Surah ${surah}, Verse ${verse}`; // Construct verse text
     const result = await contextualTranslation({
-      verse: verseText,
-      commentary: commentary,
-      hadith: hadith,
+      verseText: verseText,
+      commentary: selectedCommentary,
     });
+
     setTranslatedText(result?.translation || 'Translation not available.');
+    setExplanation(result?.explanation || 'Explanation not available.');
   };
 
   return (
@@ -322,38 +330,26 @@ export function QuranVerse() {
         </Card>
       </div>
 
-      {/* Commentary Input */}
+      {/* Commentary Selection */}
       <div className="w-full md:w-1/2">
         <Card>
           <CardHeader>
             <CardTitle>Commentary</CardTitle>
-            <CardDescription>Add commentary for context</CardDescription>
+            <CardDescription>Select commentary for context</CardDescription>
           </CardHeader>
           <CardContent>
-            <Textarea
-              placeholder="Enter Commentary"
-              value={commentary}
-              onChange={(e) => setCommentary(e.target.value)}
-              className="bg-fafafa text-quran-commentary"
-            />
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Hadith Input */}
-      <div className="w-full md:w-1/2">
-        <Card>
-          <CardHeader>
-            <CardTitle>Hadith</CardTitle>
-            <CardDescription>Add relevant Hadith</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Textarea
-              placeholder="Enter Hadith"
-              value={hadith}
-              onChange={(e) => setHadith(e.target.value)}
-              className="bg-fafafa text-quran-hadith"
-            />
+            <Select onValueChange={setCommentary} defaultValue={selectedCommentary}>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Select a Commentary"/>
+              </SelectTrigger>
+              <SelectContent>
+                {commentaries.map((commentary) => (
+                  <SelectItem key={commentary.value} value={commentary.value}>
+                    {commentary.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </CardContent>
         </Card>
       </div>
@@ -362,8 +358,8 @@ export function QuranVerse() {
       <div className="w-full md:w-1/2">
         <Card>
           <CardHeader>
-            <CardTitle>Translation</CardTitle>
-            <CardDescription>Translated text</CardDescription>
+            <CardTitle>Translation and Explanation</CardTitle>
+            <CardDescription>Translated text and verse explanation</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
             <Textarea
@@ -372,8 +368,14 @@ export function QuranVerse() {
               value={translatedText}
               className="bg-fafafa text-quran-translation"
             />
+            <Textarea
+              readOnly
+              placeholder="Verse Explanation"
+              value={explanation}
+              className="bg-fafafa text-quran-commentary"
+            />
             <Button onClick={handleTranslation} className="bg-e3f2fd text-primary-foreground hover:bg-primary">
-              Translate
+              Translate and Explain
             </Button>
           </CardContent>
         </Card>
