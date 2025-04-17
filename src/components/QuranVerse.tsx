@@ -135,6 +135,12 @@ const commentaries = [
   {label: 'Tafsir al-Samarqandi', value: 'samarqandi'},
   {label: 'Tafsir al-Thalabi', value: 'thalabi'},
   {label: 'Tafsir al-Wahidi', value: 'wahidi'},
+  {label: 'Tafsir al-Waseet', value: 'waseet'},
+  {label: 'Tafsir al-Mizan', value: 'mizan'},
+  {label: 'Tafsir al-Asr', value: 'asr'},
+  {label: 'Tafsir al-Bayan', value: 'bayan'},
+  {label: 'Tafsir al-Hidayah', value: 'hidayah'},
+  {label: 'Tafsir al-Noor', value: 'noor'}
   // Add more commentaries as needed
 ];
 
@@ -389,7 +395,7 @@ export function QuranVerse() {
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
           <img
-              src={`https://source.unsplash.com/600x300/?islamic+nature&${surah}-${verse}`}
+              src={`https://picsum.photos/600/300?random=${surah}-${verse}`}
               alt="Quranic Verse"
               className="rounded-md shadow-md mb-4 object-cover w-full h-48" // Added object-cover and fixed height
             />
@@ -403,7 +409,7 @@ export function QuranVerse() {
               Translate
             </Button>
               <img
-              src={`https://source.unsplash.com/600x300/?islamic+patterns&${selectedCommentary}`} // Dynamic image URL
+              src={`https://picsum.photos/600/300?random=${selectedCommentary}`} // Dynamic image URL
               alt="Commentary Explanation"
               className="rounded-md shadow-md mb-4 object-cover w-full h-48" // Added object-cover and fixed height
             />
