@@ -1,1 +1,3 @@
-// Flows will be imported for their side effects in this file.
+import '@/ai/flows/contextual-translation.ts';
+import '@/ai/flows/prompt-based-verse-exploration.ts';
+import '@/ai/flows/relevant-hadith-identification.ts';
