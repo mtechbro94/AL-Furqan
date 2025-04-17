@@ -14,6 +14,9 @@ export default function Home() {
         </p>
         <QuranVerse />
       </main>
+      <footer>
+        Developed by Aaqib Rashid Mir
+      </footer>
     </div>
   );
 }

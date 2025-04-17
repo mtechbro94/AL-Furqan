@@ -5,7 +5,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   /* Fallback font */
-  background-image: url('https://picsum.photos/1920/1080?random=1');
+  background-image: url('https://i.pinimg.com/originals/b4/9d/ba/b49dbae3023011bd0f7b53e21939e6ae.jpg');
   /* Replace with your image URL */
   background-size: cover;
   background-position: center;
@@ -109,4 +109,22 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Add a copyright notice */
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.8em;
+  color: #666;
+}
+
+/* Styles for dynamic verses */
+.dynamic-verse {
+  transition: all 0.3s ease-in-out;
+}
+
+.dynamic-verse:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

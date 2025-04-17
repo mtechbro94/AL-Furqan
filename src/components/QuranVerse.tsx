@@ -259,7 +259,6 @@ const getVerseCount = (surah: string): number => {
   }
 };
 
-
 export function QuranVerse() {
   const [surah, setSurah] = useState<string>('1');
   const [verse, setVerse] = useState<string>('1');
@@ -372,8 +371,8 @@ export function QuranVerse() {
             <CardDescription>Translated text and verse explanation</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
-           <img
-              src="https://picsum.photos/400/200?random=2" // Placeholder image URL
+          <img
+              src={`https://source.unsplash.com/400x200/?islam,quran&${surah}-${verse}`}
               alt="Quranic Verse"
               className="rounded-md shadow-md mb-4"
             />
@@ -386,8 +385,8 @@ export function QuranVerse() {
             <Button onClick={handleTranslation} className="bg-e3f2fd text-primary-foreground hover:bg-primary">
               Translate
             </Button>
-             <img
-              src="https://picsum.photos/400/200?random=3" // Placeholder image URL
+              <img
+              src={`https://source.unsplash.com/400x200/?islamic,commentary&${selectedCommentary}`} // Dynamic image URL
               alt="Commentary Explanation"
               className="rounded-md shadow-md mb-4"
             />
@@ -406,4 +405,3 @@ export function QuranVerse() {
     </div>
   );
 }
-
