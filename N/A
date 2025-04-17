@@ -1,0 +1,48 @@
+To deploy this Next.js application, follow these general steps depending on your hosting provider:
+
+**Vercel or Netlify (Recommended):**
+
+1.  **Connect your repository:** Sign up for an account on Vercel ([https://vercel.com/](https://vercel.com/)) or Netlify ([https://www.netlify.com/](https://www.netlify.com/)). Connect your Git repository (GitHub, GitLab, Bitbucket) to the platform.
+2.  **Configure deployment settings:**
+    *   Vercel usually autodetects the Next.js project and configures the settings automatically.
+    *   Netlify might require you to specify the build command (`next build`) and the publish directory (`out` or `.next`).
+3.  **Deploy:** The platform will automatically deploy your application whenever you push changes to your repository.
+
+**Firebase Hosting:**
+
+1.  **Install Firebase CLI:** If you haven't already, install the Firebase CLI globally:
+
+    ```bash
+    npm install -g firebase-tools
+    ```
+2.  **Login to Firebase:**
+
+    ```bash
+    firebase login
+    ```
+3.  **Initialize Firebase in your project:** Run the following command in your project directory:
+
+    ```bash
+    firebase init hosting
+    ```
+
+    *   Select "Use an existing project" and choose your Firebase project.
+    *   Specify "public" as your public directory (or `out` if using `next export`).
+    *   Configure as a single-page app (yes).
+    *   Do not set up automatic deploys with GitHub (unless you want that).
+4.  **Build your Next.js app:**
+
+    ```bash
+    npm run build
+    ```
+5.  **Deploy to Firebase Hosting:**
+
+    ```bash
+    firebase deploy --only hosting
+    ```
+
+**Important Considerations:**
+
+*   **Environment Variables:**  If your application relies on environment variables (like `GOOGLE_GENAI_API_KEY`), make sure to configure them in your hosting provider's settings.
+*   **Free Tier Limits:** Be mindful of the free tier limitations of each platform, such as bandwidth, build minutes, and storage.
+*   **Server Actions:** Next.js Server Actions might require specific configurations depending on the deployment platform. Check the platform's documentation for details.
