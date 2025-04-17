@@ -5,7 +5,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   /* Fallback font */
-  background-image: url('https://i.pinimg.com/originals/b4/9d/ba/b49dbae3023011bd0f7b53e21939e6ae.jpg');
+  background: linear-gradient(to bottom, #e6e6e6, #ffffff);
+  /* Gradient background */
+  /*background-image: url('https://i.pinimg.com/originals/b4/9d/ba/b49dbae3023011bd0f7b53e21939e6ae.jpg');*/
   /* Replace with your image URL */
   background-size: cover;
   background-position: center;
@@ -128,3 +130,23 @@ footer {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+/* Add a subtle gradient to the cards */
+.card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+/* Improve text visibility */
+.text-primary {
+  color: #4a90e2;
+  /* A more vibrant primary color */
+}
+.text-quran-commentary,
+.text-quran-translation {
+  color: #333;
+  /* Darker color for better readability */
+}
+
+

@@ -129,7 +129,9 @@ const commentaries = [
   {label: 'Tafsir ibn Kathir', value: 'kathir'},
   {label: 'Tafsir al-Qurtubi', value: 'qurtubi'},
   {label: 'Tafsir al-Tabari', value: 'tabari'},
-  {label: 'Tafsir al-Baghawi', value: 'baghawi'},
+    {label: 'Tafsir al-Baghawi', value: 'baghawi'},
+    {label: 'Tafsir al-Suyuti', value: 'suyuti'},
+    {label: 'Tafsir al-Jami', value: 'jami'},
   {label: 'Tafsir al-Samarqandi', value: 'samarqandi'},
   {label: 'Tafsir al-Thalabi', value: 'thalabi'},
   {label: 'Tafsir al-Wahidi', value: 'wahidi'},
@@ -298,7 +300,7 @@ export function QuranVerse() {
     <div className="flex flex-col md:flex-row gap-4 w-full py-12">
       {/* Surah Selection */}
       <div className="w-full md:w-1/2">
-        <Card>
+        <Card className="card">
           <CardHeader>
             <CardTitle>Surah</CardTitle>
             <CardDescription>Select the Surah</CardDescription>
@@ -322,7 +324,7 @@ export function QuranVerse() {
 
       {/* Verse Selection */}
       <div className="w-full md:w-1/2">
-        <Card>
+        <Card className="card">
           <CardHeader>
             <CardTitle>Verse</CardTitle>
             <CardDescription>Select the Verse</CardDescription>
@@ -346,7 +348,7 @@ export function QuranVerse() {
 
       {/* Commentary Selection */}
       <div className="w-full md:w-1/2">
-        <Card>
+        <Card className="card">
           <CardHeader>
             <CardTitle>Commentary</CardTitle>
             <CardDescription>Select commentary for context</CardDescription>
@@ -370,16 +372,16 @@ export function QuranVerse() {
 
       {/* Translation Output */}
       <div className="w-full md:w-1/2">
-        <Card>
+        <Card className="card">
           <CardHeader>
             <CardTitle>Translation and Explanation</CardTitle>
             <CardDescription>Translated text and verse explanation</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
           <img
-              src={`https://source.unsplash.com/400x200/?quran,islamic,verse&${surah}-${verse}`}
+              src={`https://source.unsplash.com/600x300/?quran,islamic,verse&${surah}-${verse}`}
               alt="Quranic Verse"
-              className="rounded-md shadow-md mb-4"
+              className="rounded-md shadow-md mb-4 object-cover w-full h-48" // Added object-cover and fixed height
             />
             <Textarea
               readOnly
@@ -391,9 +393,9 @@ export function QuranVerse() {
               Translate
             </Button>
               <img
-              src={`https://source.unsplash.com/400x200/?islamic,tafseer,commentary&${selectedCommentary}`} // Dynamic image URL
+              src={`https://source.unsplash.com/600x300/?islamic,tafseer,commentary&${selectedCommentary}`} // Dynamic image URL
               alt="Commentary Explanation"
-              className="rounded-md shadow-md mb-4"
+              className="rounded-md shadow-md mb-4 object-cover w-full h-48" // Added object-cover and fixed height
             />
             <Textarea
               readOnly
