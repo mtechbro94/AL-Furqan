@@ -140,7 +140,11 @@ const commentaries = [
   {label: 'Tafsir al-Asr', value: 'asr'},
   {label: 'Tafsir al-Bayan', value: 'bayan'},
   {label: 'Tafsir al-Hidayah', value: 'hidayah'},
-  {label: 'Tafsir al-Noor', value: 'noor'}
+  {label: 'Tafsir al-Noor', value: 'noor'},
+  {label: 'Tafsir al-Quran al-Azim', value: 'azim'},
+  {label: 'Tafsir al-Tustari', value: 'tustari'},
+  {label: 'Tafsir al-Thana\'i', value: 'thanai'},
+  {label: 'Tafsir al-Jawahir', value: 'jawahir'}
   // Add more commentaries as needed
 ];
 
@@ -401,8 +405,8 @@ export function QuranVerse() {
               readOnly
               placeholder="Translated Text"
               value={translatedText}
-              className="bg-fafafa text-quran-translation"
-              style={{ minHeight: '100px', height: 'auto' }}
+              className="bg-gray-100 text-quran-translation"
+              style={{ minHeight: '100px', height: 'auto', marginTop: '8px' }}
             />
           </CardContent>
         </Card>
@@ -419,8 +423,8 @@ export function QuranVerse() {
               readOnly
               placeholder="Verse Explanation"
               value={explanation}
-              className="bg-fafafa text-quran-commentary"
-              style={{ minHeight: '100px', height: 'auto' }}
+              className="bg-gray-100 text-quran-commentary"
+              style={{ minHeight: '100px', height: 'auto', marginTop: '8px' }}
             />
           </CardContent>
         </Card>
@@ -428,3 +432,4 @@ export function QuranVerse() {
     </div>
   );
 }
+

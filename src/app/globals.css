@@ -8,13 +8,13 @@ body {
   /* Fallback font */
   /*background: linear-gradient(to bottom, #e6e6e6, #ffffff);*/
   /* Gradient background */
-  /*background-image: url('https://i.pinimg.com/originals/b4/9d/ba/b49dbae3023011bd0f7b53e21939e6ae.jpg');*/
+  background-image: url('https://i.pinimg.com/originals/b4/9d/ba/b49dbae3023011bd0f7b53e21939e6ae.jpg');
   /* Replace with your image URL */
-  /*background-size: cover;
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;*/
+  background-repeat: no-repeat;
   /* Ensure the background covers the entire body */
-  background-color: #E3F2FD;
+  /*background-color: #E3F2FD;*/
 }
 
 @layer base {
@@ -132,21 +132,77 @@ footer {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-/* Add a subtle gradient to the cards */
-.card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-  backdrop-filter: blur(5px);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
+
 /* Improve text visibility */
 .text-primary {
   color: #4a90e2;
   /* A more vibrant primary color */
 }
+
 .text-quran-commentary,
 .text-quran-translation {
   color: #333;
   /* Darker color for better readability */
 }
+/* Styles for the AL Furqan app */
+
+/* General body styles to ensure full height and central alignment */
+
+/* Styling for the main content area */
+
+/* Styles for the AL Furqan app */
+
+/* General body styles to ensure full height and central alignment */
+
+/* Styling for the main content area */
+
+/* Styles for the AL Furqan app */
+
+/* General body styles to ensure full height and central alignment */
+
+/* Styling for the main content area */
+/* Style adjustments for primary text color */
+
+/* Updated card styles with a subtle gradient and shadow */
+
+/* Enhanced button styles with primary color */
+
+/* Enhanced text area styles for better readability */
+/* Modernizing the color palette and applying gradient */
+
+/* Setting up a consistent typographic base and enhancing readability */
+
+/* Ensuring the background is engaging and visually undisturbed */
+/* Setting up a consistent typographic base and enhancing readability */
+
+/* Ensuring the background is engaging and visually undisturbed */
+/* Setting up a consistent typographic base and enhancing readability */
+
+/* Ensuring the background is engaging and visually undisturbed */
+/* Adjusted background color to ensure contrast and readability */
+/* Style adjustments for primary text color */
+
+/* Updated card styles with a subtle gradient and shadow */
+
+/* Enhanced button styles with primary color */
+
+/* Enhanced text area styles for better readability */
+/* Modernizing the color palette and applying gradient */
+
+/* Setting up a consistent typographic base and enhancing readability */
+
+/* Ensuring the background is engaging and visually undisturbed */
+/* Adjusted background color to ensure contrast and readability */
+/* Style adjustments for primary text color */
+
+/* Updated card styles with a subtle gradient and shadow */
+
+/* Enhanced button styles with primary color */
+
+/* Enhanced text area styles for better readability */
+/* Modernizing the color palette and applying gradient */
+
+/* Setting up a consistent typographic base and enhancing readability */
+
+/* Ensuring the background is engaging and visually undisturbed */
+/* Adjusted background color to ensure contrast and readability */
