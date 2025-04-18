@@ -43,7 +43,7 @@ export default function Home() {
         <h1 className="text-5xl font-bold text-white mb-4 shadow-md rounded-lg px-4 py-2 bg-black/80">
           AL Furqan
         </h1>
-        <p className="text-lg text-white mb-8 italic">
+        <p className="text-lg text-black mb-8 italic">
           "Illuminating the path with divine wisdom." - Explore the Quran with
           contextual understanding.
         </p>
@@ -55,3 +55,4 @@ export default function Home() {
     </div>
   );
 }
+
