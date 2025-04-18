@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,9 +6,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   /* Fallback font */
-  background: linear-gradient(to bottom, #e6e6e6, #ffffff);
+  /*background: linear-gradient(to bottom, #e6e6e6, #ffffff);*/
   /* Gradient background */
-  /*background-image: url('https://i.pinimg.com/originals/b4/9d/ba/b49dbae3023011bd0f7b53e21939e6ae.jpg');*/
+  background-image: url('https://i.pinimg.com/originals/b4/9d/ba/b49dbae3023011bd0f7b53e21939e6ae.jpg');
   /* Replace with your image URL */
   background-size: cover;
   background-position: center;
@@ -148,6 +149,3 @@ footer {
   color: #333;
   /* Darker color for better readability */
 }
-
-
-
