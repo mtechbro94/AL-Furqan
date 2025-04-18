@@ -3,9 +3,9 @@
 import {useState} from 'react';
 import {contextualTranslation} from '@/ai/flows/contextual-translation';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Textarea} from "@/components/ui/textarea";
 import {Button} from "@/components/ui/button";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Textarea} from "@/components/ui/textarea";
 
 const surahs = [
   {label: 'Al-Fatiha (The Opening)', value: '1'},
@@ -390,30 +390,28 @@ export function QuranVerse() {
       <div className="w-full md:w-1/2">
         <Card className="card">
           <CardHeader>
-            <CardTitle>Translation and Explanation</CardTitle>
-            <CardDescription>Translated text and verse explanation</CardDescription>
+            <CardTitle>Translation</CardTitle>
+            <CardDescription>Translated text</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
-          <img
-              src="https://images.unsplash.com/photo-1575997132781-fe47537a6c3a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Quranic Verse"
-              className="rounded-md shadow-md mb-4 object-cover w-full h-48" // Added object-cover and fixed height
-            />
-            <Button onClick={handleTranslation} className="bg-green-500 text-white hover:bg-green-700">
+             <Button onClick={handleTranslation} className="bg-green-500 text-white hover:bg-green-700">
               Translate
             </Button>
-             <Textarea
+            <Textarea
               readOnly
               placeholder="Translated Text"
               value={translatedText}
               className="bg-fafafa text-quran-translation"
               style={{ minHeight: '100px', height: 'auto' }}
             />
-              <img
-              src="https://images.unsplash.com/photo-1517270422455-fa359046831a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Dynamic image URL
-              alt="Commentary Explanation"
-              className="rounded-md shadow-md mb-4 object-cover w-full h-48" // Added object-cover and fixed height
-            />
+          </CardContent>
+        </Card>
+        <Card className="card">
+          <CardHeader>
+            <CardTitle>Explanation</CardTitle>
+            <CardDescription>Verse explanation</CardDescription>
+          </CardHeader>
+          <CardContent className="flex flex-col gap-4">
             <Button onClick={handleExplanation} className="bg-blue-500 text-white hover:bg-blue-700">
               Explain Verse
             </Button>
