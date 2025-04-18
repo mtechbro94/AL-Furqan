@@ -399,7 +399,7 @@ export function QuranVerse() {
               alt="Quranic Verse"
               className="rounded-md shadow-md mb-4 object-cover w-full h-48" // Added object-cover and fixed height
             />
-            <Button onClick={handleTranslation} className="bg-e3f2fd text-primary-foreground hover:bg-primary">
+            <Button onClick={handleTranslation} className="bg-green-500 text-white hover:bg-green-700">
               Translate
             </Button>
              <Textarea
@@ -414,7 +414,7 @@ export function QuranVerse() {
               alt="Commentary Explanation"
               className="rounded-md shadow-md mb-4 object-cover w-full h-48" // Added object-cover and fixed height
             />
-            <Button onClick={handleExplanation} className="bg-e3f2fd text-primary-foreground hover:bg-primary">
+            <Button onClick={handleExplanation} className="bg-blue-500 text-white hover:bg-blue-700">
               Explain Verse
             </Button>
              <Textarea
