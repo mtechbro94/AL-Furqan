@@ -395,7 +395,7 @@ export function QuranVerse() {
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
           <img
-              src={`https://picsum.photos/600/300?random=${surah}-${verse}`}
+              src="https://images.unsplash.com/photo-1575997132781-fe47537a6c3a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Quranic Verse"
               className="rounded-md shadow-md mb-4 object-cover w-full h-48" // Added object-cover and fixed height
             />
@@ -410,7 +410,7 @@ export function QuranVerse() {
               style={{ minHeight: '100px', height: 'auto' }}
             />
               <img
-              src={`https://picsum.photos/600/300?random=${selectedCommentary}`} // Dynamic image URL
+              src="https://images.unsplash.com/photo-1517270422455-fa359046831a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Dynamic image URL
               alt="Commentary Explanation"
               className="rounded-md shadow-md mb-4 object-cover w-full h-48" // Added object-cover and fixed height
             />
