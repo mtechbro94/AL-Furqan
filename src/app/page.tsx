@@ -2,6 +2,8 @@
 import {QuranVerse} from '@/components/QuranVerse';
 
 export default function Home() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
@@ -9,15 +11,16 @@ export default function Home() {
           AL Furqan
         </h1>
         <p className="text-lg text-gray-700 mb-8 italic">
-          "Indeed, it is a decisive statement." - Explore the Quran with
+          "Illuminating the path with divine wisdom." - Explore the Quran with
           contextual understanding.
         </p>
         <QuranVerse />
       </main>
-      <footer>
-        Developed by Aaqib Rashid Mir
+      <footer className="bg-gray-200 py-2 px-4 rounded shadow mt-4">
+        &copy; {currentYear} Aaqib Rashid Mir
       </footer>
     </div>
   );
 }
+
 
