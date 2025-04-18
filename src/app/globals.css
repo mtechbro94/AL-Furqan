@@ -8,12 +8,13 @@ body {
   /* Fallback font */
   /*background: linear-gradient(to bottom, #e6e6e6, #ffffff);*/
   /* Gradient background */
-  background-image: url('https://i.pinimg.com/originals/b4/9d/ba/b49dbae3023011bd0f7b53e21939e6ae.jpg');
+  /*background-image: url('https://i.pinimg.com/originals/b4/9d/ba/b49dbae3023011bd0f7b53e21939e6ae.jpg');*/
   /* Replace with your image URL */
-  background-size: cover;
+  /*background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
   /* Ensure the background covers the entire body */
+  background-color: #E3F2FD;
 }
 
 @layer base {
