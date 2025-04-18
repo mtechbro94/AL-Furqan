@@ -399,29 +399,31 @@ export function QuranVerse() {
               alt="Quranic Verse"
               className="rounded-md shadow-md mb-4 object-cover w-full h-48" // Added object-cover and fixed height
             />
-            <Textarea
+            <Button onClick={handleTranslation} className="bg-e3f2fd text-primary-foreground hover:bg-primary">
+              Translate
+            </Button>
+             <Textarea
               readOnly
               placeholder="Translated Text"
               value={translatedText}
               className="bg-fafafa text-quran-translation"
+              style={{ minHeight: '100px', height: 'auto' }}
             />
-            <Button onClick={handleTranslation} className="bg-e3f2fd text-primary-foreground hover:bg-primary">
-              Translate
-            </Button>
               <img
               src={`https://picsum.photos/600/300?random=${selectedCommentary}`} // Dynamic image URL
               alt="Commentary Explanation"
               className="rounded-md shadow-md mb-4 object-cover w-full h-48" // Added object-cover and fixed height
             />
-            <Textarea
+            <Button onClick={handleExplanation} className="bg-e3f2fd text-primary-foreground hover:bg-primary">
+              Explain Verse
+            </Button>
+             <Textarea
               readOnly
               placeholder="Verse Explanation"
               value={explanation}
               className="bg-fafafa text-quran-commentary"
+              style={{ minHeight: '100px', height: 'auto' }}
             />
-            <Button onClick={handleExplanation} className="bg-e3f2fd text-primary-foreground hover:bg-primary">
-              Explain Verse
-            </Button>
           </CardContent>
         </Card>
       </div>
