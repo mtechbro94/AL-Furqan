@@ -2,33 +2,17 @@
 import {QuranVerse} from '@/components/QuranVerse';
 import React, {useEffect, useState} from 'react';
 
-const imageURLs = [
-  'https://i.pinimg.com/originals/b4/9d/ba/b49dbae3023011bd0f7b53e21939e6ae.jpg',
-  'https://wallpapercave.com/wp/wp7741395.jpg',
-  'https://wallpapercave.com/wp/wp7741453.jpg',
-  'https://images.unsplash.com/photo-1553028862-58594936461c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGlzbGFtaWMlMjBhcnR8ZW58MHx8MHx8fDA%3D&w=1000&q=80',
-  'https://i.pinimg.com/736x/4c/c8/ab/4cc8ab3494e369c580552419ca82d39c.jpg',
-  // Add more image URLs here
-];
+const backgroundImageURL = 'https://i.pinimg.com/736x/4c/c8/ab/4cc8ab3494e369c580552419ca82d39c.jpg';
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageURLs.length);
-    }, 5000); // Change image every 5 seconds
-
-    return () => clearInterval(intervalId);
-  }, []);
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen py-2">
       <div
         className="dynamic-background"
         style={{
-          backgroundImage: `url(${imageURLs[currentImageIndex]})`,
+          backgroundImage: `url(${backgroundImageURL})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           position: 'fixed',
