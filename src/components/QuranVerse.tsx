@@ -4,7 +4,7 @@ import {useState} from 'react';
 import {contextualTranslation} from '@/ai/flows/contextual-translation';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select"
 import {Textarea} from "@/components/ui/textarea";
 
 const surahs = [
@@ -390,14 +390,14 @@ export function QuranVerse() {
         </Card>
       </div>
 
-      {/* Translation Output */}
       <div className="w-full md:w-1/2">
         <Card className="card">
           <CardHeader>
             <CardTitle>Translation</CardTitle>
             <CardDescription>Translated text</CardDescription>
           </CardHeader>
-          <CardContent className="flex flex-col gap-4">
+          <CardContent >
+          <div className="flex flex-col gap-4">
              <Button onClick={handleTranslation} className="bg-green-500 text-white hover:bg-green-700">
               Translate
             </Button>
@@ -406,19 +406,20 @@ export function QuranVerse() {
               placeholder="Translated Text"
               value={translatedText}
              
-            />
+            /></div>
           </CardContent>
         </Card>
         <Card className="card">
           <CardHeader>
-            <CardTitle>Explanation</CardTitle>
-            <CardDescription>Verse explanation</CardDescription>
+             <CardTitle>Explanation</CardTitle>
+             <CardDescription>Verse explanation</CardDescription>
           </CardHeader>
-          <CardContent className="flex flex-col gap-4">
+          <CardContent >
+          <div className="flex flex-col gap-4">
             <Button onClick={handleExplanation} className="bg-blue-500 text-white hover:bg-blue-700">
               Explain Verse
             </Button>
-             <Textarea
+            <Textarea
               readOnly
               placeholder="Verse Explanation"
               value={explanation}
@@ -427,6 +428,7 @@ export function QuranVerse() {
         </Card>
       </div>
     </div>
+      </div>
   );
 }
 
