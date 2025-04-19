@@ -2,20 +2,10 @@
 import {QuranVerse} from '@/components/QuranVerse';
 import React, {useState} from 'react';
 
-const backgroundImageURL = 'https://i.pinimg.com/originals/b4/9d/ba/b49dbae3023011bd0f7b53e21939e6ae.jpg';
+const backgroundImageURL = "https://img.freepik.com/free-vector/blue-wavy-shape-background_1055-2929.jpg?t=st=1745029613~exp=1745033213~hmac=f4296e6c64ef9baae34faca4cf61ab4673325938d6f9ab8e8e9bf37c6460c529&w=826";
 
 export default function Home() {
   const currentYear = new Date().getFullYear();
-
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
-
-  const handleImageError = () => {
-    console.error("Error loading background image.");
-  };
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen py-2">
@@ -31,29 +21,8 @@ export default function Home() {
           width: '100%',
           height: '100%',
           zIndex: -1,
-          opacity: imageLoaded ? 1 : 0.5,
-          transition: 'opacity 0.5s ease-in-out',
         }}
       >
-        <img
-          src={backgroundImageURL}
-          alt=""
-          style={{ display: 'none' }}
-          onLoad={handleImageLoad}
-          onError={handleImageError}
-        />
-        {!imageLoaded && (
-          <div
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              backgroundColor: '#E3F2FD',
-            }}
-          ></div>
-        )}
       </div>
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <h1 className="text-5xl font-bold text-black mb-4 shadow-md rounded-lg px-4 py-2 bg-white/80">
@@ -71,3 +40,4 @@ export default function Home() {
     </div>
   );
 }
+
