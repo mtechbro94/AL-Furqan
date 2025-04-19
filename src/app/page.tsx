@@ -2,7 +2,7 @@
 import {QuranVerse} from '@/components/QuranVerse';
 import React, {useEffect, useState} from 'react';
 
-const backgroundImageURL = 'https://i.pinimg.com/736x/4c/c8/ab/4cc8ab3494e369c580552419ca82d39c.jpg';
+const backgroundImageURL = 'https://www.freepik.com/free-vector/abstract-blur-pink-blue-gradient-background-design_30087643.htm#fromView=keyword&page=1&position=8&uuid=fefcce94-9f2f-49c4-9e75-84f591902139&query=App+Background';
 
 export default function Home() {
   const currentYear = new Date().getFullYear();

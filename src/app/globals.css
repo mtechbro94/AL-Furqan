@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,7 +17,7 @@ body {
   /* Ensure the background covers the entire body */
   /*background-color: #E3F2FD;*/
   /* Dynamic background images */
-  /*background-image: url('https://source.unsplash.com/random/1920x1080/?islamic,nature');*/
+  /*background-image: url('https://www.freepik.com/free-vector/abstract-blur-pink-blue-gradient-background-design_30087643.htm#fromView=keyword&page=1&position=8&uuid=fefcce94-9f2f-49c4-9e75-84f591902139&query=App+Background');*/
   /* Uses a random image from Unsplash */
   /*background-size: cover;
   background-position: center;
@@ -86,32 +87,6 @@ body {
 
 /* Ensuring the background is engaging and visually undisturbed */
 /* Adjusted background color to ensure contrast and readability */
-
-.dynamic-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  /* Place behind all content */
-}
-
-.dynamic-background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://i.pinimg.com/originals/b4/9d/ba/b49dbae3023011bd0f7b53e21939e6ae.jpg');
-  /* Replace with a default or placeholder image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(5px);
-  /* Optional: Apply a blur effect */
-}
 
 @layer base {
   :root {
@@ -309,14 +284,6 @@ footer {
 /* Color enhancements for primary interactive elements */
 /* Ensuring better readability with darker text on light backgrounds */
 /* Creating a visually undisturbed and clear base */
-/* Setting up a consistent typographic base and enhancing readability */
-/* Ensuring the background is engaging and visually undisturbed */
-/* Adjusted background color to ensure contrast and readability */
-/* Style adjustments for primary text color */
-/* Updated card styles with a subtle gradient and shadow */
-/* Enhanced button styles with primary color */
-/* Enhanced text area styles for better readability */
-/* Modernizing the color palette and applying gradient */
 /* Setting up a consistent typographic base and enhancing readability */
 /* Ensuring the background is engaging and visually undisturbed */
 /* Adjusted background color to ensure contrast and readability */
