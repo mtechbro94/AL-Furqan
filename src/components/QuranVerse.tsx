@@ -405,8 +405,7 @@ export function QuranVerse() {
               readOnly
               placeholder="Translated Text"
               value={translatedText}
-              className="bg-gray-100 text-quran-translation"
-              style={{ minHeight: '100px', height: 'auto', marginTop: '8px' }}
+              className="bg-gray-100 text-quran-translation resize-y min-h-[100px] mt-2"
             />
           </CardContent>
         </Card>
@@ -423,8 +422,7 @@ export function QuranVerse() {
               readOnly
               placeholder="Verse Explanation"
               value={explanation}
-              className="bg-gray-100 text-quran-commentary"
-              style={{ minHeight: '100px', height: 'auto', marginTop: '8px' }}
+              className="bg-gray-100 text-quran-commentary resize-y min-h-[100px] mt-2"
             />
           </CardContent>
         </Card>
